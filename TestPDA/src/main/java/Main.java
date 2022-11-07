@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		EntityManager em=Persistence.createEntityManagerFactory("TestPDA").createEntityManager();
+		EntityManager em = Persistence.createEntityManagerFactory("TestPDA").createEntityManager();
 		System.out.println("done");
 
 	}

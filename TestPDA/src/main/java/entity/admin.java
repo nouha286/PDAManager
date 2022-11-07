@@ -1,23 +1,22 @@
 package entity;
 
+import java.io.Serializable;
+
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
 @Entity
-public class admin extends user {
+@DiscriminatorValue("Admin")
+public class Admin extends Utilisateur implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private String login;
 	private String email;
 	private String password;
 	
-	public admin() {}
+	public Admin() {}
 	
-	public admin(Integer id, String nom, String prenom, String tele,String login,String email,String password) {
-		super(id, nom, prenom, tele);
-		this.login = login;
-		this.email = email;
-		this.password = password;
-	}
+	
 
 	public String getLogin() {
 		return login;
@@ -41,6 +40,13 @@ public class admin extends user {
 	
 	public void  setPassword(String password) {
 		this.password = password;
+	}
+
+
+
+	public Admin(Integer id, String nom, String prenom, String tele, Etat etat, Role role) {
+		super(id, nom, prenom, tele, etat, role);
+		// TODO Auto-generated constructor stub
 	}
 	
 	

@@ -1,9 +1,9 @@
 package service;
 
-import entity.admin;
+import entity.Admin;
 
 public interface AdminService {
 	
-	admin add(admin Admin);
+	Admin add(Admin admin);
 
 }

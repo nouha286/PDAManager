@@ -1,8 +1,9 @@
 package repositry;
 
-import entity.admin;
+import entity.Admin;
+
 
 public interface AdminRepo {
 
-		admin add(admin Admin);
+		Admin add(Admin admin);
 }

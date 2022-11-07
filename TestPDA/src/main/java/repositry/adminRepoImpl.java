@@ -2,15 +2,16 @@ package repositry;
 
 import Dao.AdminDao;
 import Dao.adminDaoImpl;
-import entity.admin;
+import entity.Admin;
+
 
 public class adminRepoImpl implements AdminRepo {
 
 	AdminDao adminDao = new adminDaoImpl();
 	
-	public admin add(admin Admin) {
+	public Admin add(Admin admin) {
 		
-		return adminDao.add(Admin);
+		return adminDao.add(admin);
 	}
 
 }

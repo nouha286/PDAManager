@@ -1,7 +1,7 @@
 package Servlete;
 
 import java.io.IOException;
-import entity.admin;
+import entity.Admin;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -26,7 +26,7 @@ public class adminServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println ("1");
-		admin a = new admin();
+		Admin a = new Admin();
 //		int id = Integer.parseInt(request.getParameter("id"));
 		String nom = request.getParameter("name");
 		String prenom = request.getParameter("prenom");

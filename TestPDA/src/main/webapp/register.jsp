@@ -32,8 +32,8 @@
             <td><input type="text" name="login" id="login"/></td>
         </tr>
         <tr>
-            <td><label for="tele">Entrez Votre email:</label></td>
-            <td><input type="text" name="tele" id="tele"/></td>
+            <td><label for="email">Entrez Votre email:</label></td>
+            <td><input type="text" name="email" id="email"/></td>
         </tr>
         <tr>
             <td><label for="password">Entrez Votre password:</label></td>

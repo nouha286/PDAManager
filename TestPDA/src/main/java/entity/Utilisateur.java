@@ -109,7 +109,6 @@ public abstract class Utilisateur implements Serializable
 
 
 	public Utilisateur(Integer id, String nom, String prenom, String tele, Etat etat, Role role) {
-		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;

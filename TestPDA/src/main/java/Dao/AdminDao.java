@@ -1,10 +1,10 @@
 package Dao;
 
-import entity.Admin;
+import entity.admin;
 
 
 public interface AdminDao {
 	
-	Admin add(Admin admin);
+	admin add(admin admin);
 
 }

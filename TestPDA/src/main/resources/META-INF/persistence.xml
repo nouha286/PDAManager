@@ -4,10 +4,10 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
     <persistence-unit name="TestPDA" transaction-type="RESOURCE_LOCAL">
-					   <!--  <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
+					   <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
             <properties>
-                <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-                <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pdamanager"/>
+                <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+                <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/pdamanager"/>
                 <property name="jakarta.persistence.jdbc.user" value="root"/>
                 <property name="jakarta.persistence.jdbc.password" value=""/>
                 

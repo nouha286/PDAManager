@@ -1,7 +1,6 @@
 package service;
 
-import entity.Admin;
-
+import entity.admin;
 import repositry.AdminRepo;
 import repositry.adminRepoImpl;
 
@@ -9,7 +8,7 @@ public class AdminServiceImpl implements AdminService {
 
 	
 	AdminRepo adminrepo = new adminRepoImpl();
-	public Admin add(Admin admin) {
+	public admin add(admin admin) {
 		return adminrepo.add(admin);
 	}
 

@@ -6,9 +6,12 @@ import java.io.Serializable;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToOne;
 @Entity
+@NamedQuery(name = "Responsable.findAll",  query = "from Responsable e where e.etat = 'Active'")  
 @DiscriminatorValue("Responsable")
+
 public class Responsable extends Utilisateur implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String type;
@@ -46,6 +49,11 @@ public class Responsable extends Utilisateur implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public Responsable() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 	

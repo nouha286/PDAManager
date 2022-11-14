@@ -4,19 +4,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_2_3.xsd">
          	  <display-name>Archetype Created Web Application</display-name>
-         	  <servlet-mapping>
+         	 <!--  <servlet-mapping>
          	  	<servlet-name>AdminServlet</servlet-name>
          	  	<url-pattern>/AdminServlet</url-pattern>
-         	  </servlet-mapping>
+         	  </servlet-mapping> -->
+         	  <!-- <servlet-mapping>
+         	  	<servlet-name>lofinServlet</servlet-name>
+         	  	<url-pattern>/lofinServlet</url-pattern>
+         	  </servlet-mapping> -->
 		  <welcome-file-list>
-  			<welcome-file>register.jsp</welcome-file>
+  			<welcome-file>login.jsp</welcome-file>
  		  </welcome-file-list>
-	<servlet>
+	<!-- <servlet>
 		<servlet-class>servlet.LoginServlet</servlet-class>
 		<servlet-name>loginServlet</servlet-name>
-	</servlet>
+	</servlet> -->
 	
-	<servlet>
+	<!-- <servlet>
 		<servlet-class>servlet.RegisterServlet</servlet-class>
 		<servlet-name>RegisterServlet</servlet-name>
 	</servlet>
@@ -26,5 +30,12 @@
 		<display-name>AdminServlet</display-name>
 		<servlet-name>AdminServlet</servlet-name>
 		<servlet-class>Servlete.AdminServlet</servlet-class>
-	</servlet> 
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>lofinServlet</display-name>
+		<servlet-name>lofinServlet</servlet-name>
+		<servlet-class>Servlete.lofinServlet</servlet-class>
+	</servlet>  -->
 </web-app>

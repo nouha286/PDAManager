@@ -31,9 +31,7 @@ public class Participant extends Utilisateur implements Serializable{
 	}
 	
 	
-	public Participant() {
-		
-	}
+	public Participant() {}
 
 
 	public Participant(Integer id, String nom, String prenom, String tele, Etat etat, Role role) {

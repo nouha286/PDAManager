@@ -16,8 +16,7 @@ public class adminDaoImpl implements AdminDao {
         entityManager.getTransaction().begin();
         entityManager.persist(admin);
         entityManager.getTransaction().commit();
-//        entityManager.close();
+        entityManager.close();
         return admin;
 	}
-
 }

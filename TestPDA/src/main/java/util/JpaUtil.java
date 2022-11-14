@@ -13,7 +13,7 @@ public static EntityManager getEntityManager(String persistUnit)
 		
 		if (entityManager==null)
 		{
-		 factory = Persistence.createEntityManagerFactory(persistUnit);
+			factory = Persistence.createEntityManagerFactory(persistUnit);
 		
 		  entityManager = factory.createEntityManager();
 		}

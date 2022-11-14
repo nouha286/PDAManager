@@ -10,6 +10,7 @@ import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToOne;
 @Entity
 @NamedQuery(name = "Responsable.findAll",  query = "from Responsable e where e.etat = 'Active'")  
+@NamedQuery(name = "NonResponsable.findAll",  query = "from Responsable e where e.etat = 'Desactive'")  
 @DiscriminatorValue("Responsable")
 
 public class Responsable extends Utilisateur implements Serializable {

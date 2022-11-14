@@ -62,8 +62,8 @@ public class Activite  implements Serializable{
 
 	@ManyToMany(mappedBy = "activites")
 	  private List<Participant> participants = new ArrayList<Participant>();
-	
-	  @JoinColumn(name = "responsable_id")
+	@OneToOne
+	  @JoinColumn(name = "responsable_id" )
 	   Responsable responsable;
 
 	public Integer getId() {

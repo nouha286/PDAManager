@@ -57,7 +57,7 @@ public class ParticipantServlet extends HttpServlet {
 			String domaine=request.getParameter("domaine");
 			String structure=request.getParameter("structure");
 			String action=request.getParameter("action");
-			
+			String[] test=request.getParameterValues("activite");
 		
 			if("ajouter".equalsIgnoreCase(action))
 			{
@@ -69,10 +69,17 @@ public class ParticipantServlet extends HttpServlet {
 				participant.setEtat(Etat.Active);
 				participant.setRole(Role.Participant);
 				participant.setStructure(structure);
-				String idSTRA=request.getParameter("activite");
-				int id=Integer.parseInt(idSTRA);
-				Activite activite=activiteImlplementation.findById(id);
-				//participant.setActivites(activite);
+				List<Activite> activites=null;
+				
+				for(String tes: test)
+				{
+					String idSTRA=request.getParameter("activite");
+					int id=Integer.parseInt(tes);
+					Activite activite=activiteImlplementation.findById(id);
+					
+					activites.add(activite);
+				}
+				participant.setActivites(activites);
 				
 				participantImlplementation.add(participant);
 				System.out.println ("Creation succes" );

@@ -14,7 +14,7 @@ import service.AdminService;
 import service.AdminServiceImpl;
 
 @WebServlet(name = "adminServlet", urlPatterns ={"/register"})
-public class AdminServlet extends HttpServlet {
+public class adminServlet extends HttpServlet {
 	
 	AdminService ad = new AdminServiceImpl();
 	private static final long serialVersionUID = 1L;

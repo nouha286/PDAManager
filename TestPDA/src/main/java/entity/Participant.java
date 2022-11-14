@@ -17,6 +17,7 @@ public class Participant extends Utilisateur implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String domaine;
 	private String structure;
+	private String email;
 	
 	@ManyToMany 
 	@JoinTable(name = "participant_activite",
@@ -24,13 +25,18 @@ public class Participant extends Utilisateur implements Serializable{
             inverseJoinColumns =  @jakarta.persistence.JoinColumn (name = "activite_id"))
 	private List<Activite> activites=new ArrayList<Activite>();
 	
-	public Participant(String domaine, String structure) {
+
+	
+	
+	public Participant(String domaine, String structure, String email, List<Activite> activites) {
 		super();
 		this.domaine = domaine;
 		this.structure = structure;
+		this.email = email;
+		this.activites = activites;
 	}
-	
-	
+
+
 	public Participant() {}
 
 
@@ -53,6 +59,26 @@ public class Participant extends Utilisateur implements Serializable{
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public List<Activite> getActivites() {
+		return activites;
+	}
+
+
+	public void setActivites(List<Activite> activites) {
+		this.activites = activites;
 	}
 	
 	

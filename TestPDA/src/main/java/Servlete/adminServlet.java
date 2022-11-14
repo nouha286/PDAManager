@@ -2,9 +2,10 @@ package Servlete;
 
 import java.io.IOException;
 
+import entity.Admin;
 import entity.Etat;
 import entity.Role;
-import entity.admin;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -14,7 +15,7 @@ import service.AdminService;
 import service.AdminServiceImpl;
 
 @WebServlet(name = "adminServlet", urlPatterns ={"/register"})
-public class AdminServlet extends HttpServlet {
+public class adminServlet extends HttpServlet {
 	
 	AdminService ad = new AdminServiceImpl();
 	private static final long serialVersionUID = 1L;
@@ -28,7 +29,7 @@ public class AdminServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		admin a = new admin();
+		Admin a = new Admin();
 		String nom = request.getParameter("nom");
 		String prenom = request.getParameter("prenom");
 		String tele   = request.getParameter("tele");
@@ -50,7 +51,7 @@ public class AdminServlet extends HttpServlet {
 			a.setRole(role);
 			Etat et = Etat.Active;
 			a.setEtat(et);
-			ad.add(a);
+		//	ad.add(a);
 			System.out.println ("Creation succes" );
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}

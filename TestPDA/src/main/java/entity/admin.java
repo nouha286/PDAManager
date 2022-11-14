@@ -7,14 +7,14 @@ import jakarta.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("Admin")
-public class admin extends Utilisateur implements Serializable {
+public class Admin extends Utilisateur implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private String login;
 	private String email;
 	private String password;
 	
-	public admin() {}
+	public Admin() {}
 	
 	
 
@@ -44,7 +44,7 @@ public class admin extends Utilisateur implements Serializable {
 
 
 
-	public admin(Integer id, String nom, String prenom, String tele, Etat etat, Role role) {
+	public Admin(Integer id, String nom, String prenom, String tele, Etat etat, Role role) {
 		super(id, nom, prenom, tele, etat, role);
 		// TODO Auto-generated constructor stub
 	}

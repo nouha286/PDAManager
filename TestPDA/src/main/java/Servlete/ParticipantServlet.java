@@ -72,7 +72,7 @@ public class ParticipantServlet extends HttpServlet {
 				String idSTRA=request.getParameter("activite");
 				int id=Integer.parseInt(idSTRA);
 				Activite activite=activiteImlplementation.findById(id);
-				participant.setActivites(activite);
+				//participant.setActivites(activite);
 				
 				participantImlplementation.add(participant);
 				System.out.println ("Creation succes" );

@@ -8,53 +8,19 @@
   <name>TestPDA Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    <!-- <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    
-    	<dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa</artifactId>
-            <version>3.0.2</version>
-        </dependency>
-        
-		  <dependency>
-			    <groupId>mysql</groupId>
-			    <artifactId>mysql-connector-java</artifactId>
-			    <version>8.0.18</version>
-		</dependency>
-		
-		<dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>5.5.3.Final</version>
-        </dependency>
- -->
- <!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
 			<dependency>
 			    <groupId>org.mariadb.jdbc</groupId>
 			    <artifactId>mariadb-java-client</artifactId>
 			    <version>3.0.8</version>
 			</dependency>
  
- <!--  <dependency>
-			    <groupId>mysql</groupId>
-			    <artifactId>mysql-connector-java</artifactId>
-			    <version>8.0.18</version>
-		</dependency>
- --> <dependency>
+ 		 <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
             <version>6.0.0</version>
             <scope>provided</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core-jakarta -->
-   			
-        
        <dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-api</artifactId>
@@ -62,32 +28,13 @@
 		    <scope>test</scope>
 		</dependency>
        
-        <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-websocket -->
+      
 		<dependency>
 		    <groupId>org.apache.tomcat</groupId>
 		    <artifactId>tomcat-websocket</artifactId>
 		    <version>10.1.1</version>
 		</dependency>
-        
-			<dependency>
-			    <groupId>org.mariadb.jdbc</groupId>
-			    <artifactId>mariadb-java-client</artifactId>
-			    <version>3.0.8</version>
-			</dependency> 
- 				
- 				<!-- <dependency>
-				    <groupId>mysql</groupId>
-				    <artifactId>mysql-connector-java</artifactId>
-				       <version>8.0.31</version>
-				</dependency> -->
-
-		<dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>6.0.0</version>
-            <scope>provided</scope>
-        </dependency>
-
+      
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core-jakarta</artifactId>
@@ -99,10 +46,7 @@
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>6.2.0.Final</version>
-        </dependency>
-      
-				 
-        	
+        </dependency>     	
 				<dependency>
 				    <groupId>jakarta.servlet.jsp</groupId>
 				    <artifactId>jakarta.servlet.jsp-api</artifactId>
@@ -110,23 +54,19 @@
 				    <scope>provided</scope>
 				</dependency>
         
-        
-				 <!-- <dependency>
+				  <dependency>
 				    <groupId>org.eclipse.persistence</groupId>
 				    <artifactId>org.eclipse.persistence.jpa</artifactId>
 				    <version>4.0.0</version>
-				</dependency>-->
+				</dependency>
               
-        	<!-- <dependency>
-			    <groupId>org.hibernate</groupId>
-			    <artifactId>hibernate-entitymanager</artifactId>
-			    <version>4.2.6.Final</version>
-			</dependency>  -->
-<dependency>
- <groupId>org.glassfish.web</groupId>
- <artifactId>jakarta.servlet.jsp.jstl</artifactId>
- <version>2.0.0</version>
-</dependency>
+            
+				<dependency>
+					 <groupId>org.glassfish.web</groupId>
+					 <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+					 <version>2.0.0</version>
+				</dependency>
+				
   </dependencies>
   <build>
       <plugins>

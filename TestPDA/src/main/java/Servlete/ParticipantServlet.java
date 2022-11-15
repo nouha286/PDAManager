@@ -1,6 +1,7 @@
 package Servlete;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import entity.Activite;
@@ -69,11 +70,11 @@ public class ParticipantServlet extends HttpServlet {
 				participant.setEtat(Etat.Active);
 				participant.setRole(Role.Participant);
 				participant.setStructure(structure);
-				List<Activite> activites=null;
+				ArrayList<Activite> activites=new ArrayList<Activite>();
 				
 				for(String tes: test)
 				{
-					String idSTRA=request.getParameter("activite");
+					
 					int id=Integer.parseInt(tes);
 					Activite activite=activiteImlplementation.findById(id);
 					
@@ -101,6 +102,17 @@ public class ParticipantServlet extends HttpServlet {
 				partAediter.setEtat(Etat.Active);
 				partAediter.setRole(Role.Participant);
 				partAediter.setStructure(structure);
+				ArrayList<Activite> activites=new ArrayList<Activite>();
+				
+				for(String tes: test)
+				{
+					
+					int idA=Integer.parseInt(tes);
+					Activite activite=activiteImlplementation.findById(idA);
+					
+					activites.add(activite);
+				}
+				partAediter.setActivites(activites);
 				participantImlplementation.edite(partAediter);
 				doGet(request, response);
 				
@@ -127,6 +139,7 @@ public class ParticipantServlet extends HttpServlet {
 				int id=Integer.parseInt(idSTR);
 				
 				Participant partAediter=participantImlplementation.findById(id);
+				request.setAttribute("AllActivites", activiteImlplementation.findAll());
 				request.setAttribute("Participant", partAediter);
 				request.getRequestDispatcher("EditParticipant.jsp").forward(request, response);
 				

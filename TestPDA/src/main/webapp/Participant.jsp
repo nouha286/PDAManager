@@ -77,12 +77,13 @@
             <th>domaine</th>
        
              <th>structure</th>
+             <th>activité</th>
                           <th colspan="2">operation</th>
              
   </tr>
     </thead>
     <tbody> 
-   
+  
    
     <c:forEach items="${AllParticipants}"  var="pa" >
     
@@ -99,6 +100,7 @@
                 <td>${ pa.email}</td>
                    <td>${ pa.domaine}</td>
                       <td>${ pa.structure}</td>
+                       <td>${ pa.activites}</td>
         
           
         

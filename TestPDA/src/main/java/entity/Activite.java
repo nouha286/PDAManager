@@ -121,6 +121,7 @@ public class Activite  implements Serializable{
 		return dateDebutActivite;
 	}
 
+
 	public void setDateDebutActivite(String dateDebutActivite) {
 		this.dateDebutActivite = dateDebutActivite;
 	}

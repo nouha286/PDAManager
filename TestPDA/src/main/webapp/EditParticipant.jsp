@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,6 +39,14 @@
             <input type="hidden" name="id" id="id"  value="${Participant.id }"/>
         </tr>
         <tr>
+         <tr>
+        <td> Séléctionner l'activité:</td>
+         <c:forEach items="${AllActivites}"  var="pa" >
+        <td><label for="activite"> </label></td>
+        <td><input type="checkbox" id="activite" name="activite" value="${pa.id}">${pa.titre}</td>
+          </c:forEach>
+
+        </tr>
         
             <td colspan="2"><input name="action" type="submit" value="modifier"/></td>
         </tr>

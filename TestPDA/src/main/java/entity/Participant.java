@@ -13,7 +13,7 @@ import jakarta.persistence.NamedQuery;
 
 @Entity
 @NamedQuery(name = "NonParticipant.findAll",  query = "from Participant e where e.etat = 'Desactive'") 
-@NamedQuery(name = "Participant.findAll",  query = "from Participant e where e.etat = 'Activite'") 
+@NamedQuery(name = "Participant.findAll",  query = "from Participant e where e.etat = 'Active'") 
 @DiscriminatorValue("Participant")
 
 public class Participant extends Utilisateur implements Serializable{

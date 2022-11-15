@@ -13,8 +13,8 @@
     <table>
 
 	<tr>
-	 <td><label for="titre">Année d'exercice:</label></td>
-        <td><input type="number" min="1900" max="2099" step="1" value="2022" /></td>
+	 <td><label for="annee">Année d'exercice:</label></td>
+        <td><input name="annee" type="number" min="1900" max="2099" step="1" value="2022" /></td>
 	</tr>
 	
       <tr>
@@ -66,21 +66,21 @@
  
  
 <div>
-<h3>Liste des activités </h3>
+<h3>Liste des exercices </h3>
 
 
     <table border="1">
     
     <thead>
      <tr>
-     <th>titre</th>
+     <th>Année d'exercice</th>
         
-           <th>type</th>
+           <th>Date de début  d'exercice</th>
       
-           <th>date de début</th>
+           <th>Date de fin  d'exercice</th>
        
-           <th > date de fin</th>
-            <th > Responsable</th>
+           <th > Status d'exercice</th>
+            <th > Activité</th>
        
 
                           <th colspan="2">operation</th>

@@ -9,11 +9,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 
 @Entity
+@NamedQuery(name="Exercice.findAll", query="FROM Exercice e")
 public class Exercice implements Serializable
 {
 	/**
@@ -23,17 +26,68 @@ public class Exercice implements Serializable
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	private Date annee;
-	private Date dateDebut;
-	private Date dateFin;
-	private Boolean status;
+	private String annee;
+	private String dateDebut;
+	private String dateFin;
+	private String status;
 	
 	@ManyToOne
-	  @JoinTable(name = "activite_exercice",
-	             joinColumns =  @jakarta.persistence.JoinColumn(name = "exercice_id"),
-	             inverseJoinColumns =  @jakarta.persistence.JoinColumn(name = "activite_id"))
+	@JoinColumn(name="activite_id" )
 	 
 	  private Activite activite;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getAnnee() {
+		return annee;
+	}
+
+	public void setAnnee(String annee) {
+		this.annee = annee;
+	}
+
+	public String getDateDebut() {
+		return dateDebut;
+	}
+
+	public void setDateDebut(String dateDebut) {
+		this.dateDebut = dateDebut;
+	}
+
+	public String getDateFin() {
+		return dateFin;
+	}
+
+	public void setDateFin(String dateFin) {
+		this.dateFin = dateFin;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public Activite getActivite() {
+		return activite;
+	}
+
+	public void setActivite(Activite activite) {
+		this.activite = activite;
+	}
+
+	public Exercice() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 	

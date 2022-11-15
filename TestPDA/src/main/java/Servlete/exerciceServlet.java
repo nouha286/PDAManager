@@ -71,13 +71,13 @@ public class exerciceServlet extends HttpServlet {
 			Exercice exercice1=exerciceImplementation.findById(id);
 			exercice1.setAnnee(annee);
 			exercice1.setDateDebut(dateDebut);
-			exercice.setDateFin(dateFin);
+			exercice1.setDateFin(dateFin);
 			exercice1.setStatus(Status);
-			String id_responsable=request.getParameter("responsable");
-			int idRes=Integer.parseInt(id_responsable);
-			Responsable responsable=responsableImlplementation.findById(idRes);
-			exercice.setResponsable(responsable);
-			exerciceImplementation.edite(activite1);
+			String id_activite=request.getParameter("id_activite");
+			int idAc=Integer.parseInt(id_activite);
+			Activite activite=activiteImlplementation.findById(idAc);
+			exercice1.setActivite(activite);
+			exerciceImplementation.edite(exercice1);
 			doGet(request, response);
 		}
 		else if("supprimer".equalsIgnoreCase(action))
@@ -97,7 +97,8 @@ public class exerciceServlet extends HttpServlet {
 			Exercice ExerciceAediter=exerciceImplementation.findById(id);
 			request.setAttribute("Exercice", ExerciceAediter);
 			
-			request.setAttribute("AllExercices", exerciceImplementation.findAll());request.getRequestDispatcher("EditExercice.jsp").forward(request, response);
+			request.setAttribute("AllActivites", activiteImlplementation.findAll());
+			request.getRequestDispatcher("EditExercice.jsp").forward(request, response);
 			
 			
 		}

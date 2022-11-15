@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+      <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +33,7 @@
 	      <td>
 			 <select name="Status" id="type">
 			  <option value="encours">encours</option>
-			  <option value="terminé">terminé</option>
+			  <option value="termine">terminé</option>
 			</select>
 		</td>
       </tr>
@@ -42,9 +43,9 @@
        <td><label for="type">Séléctionner une activité:</label></td>
        
 	      <td>
-			 <select name="responsable" id="type">
-			  <c:forEach items="${AllResponsable}"  var="res" >
-			  <option value="${res.id}">${res.nom } ${res.prenom }</option>
+			 <select name="activite" id="type">
+			  <c:forEach items="${AllActivites}"  var="act" >
+			  <option value="${act.id}">${act.titre }</option>
 			 </c:forEach>
 			</select>
 		</td>
@@ -90,20 +91,20 @@
     <tbody> 
    
    
-    <c:forEach items="${AllActivites}"  var="ac" >
+    <c:forEach items="${AllExercice}"  var="ac" >
     
    
   
     
      <tr>
        <!--  -->
-       <form method="POST" action="${pageContext.request.contextPath}/Activite">
+       <form method="POST" action="${pageContext.request.contextPath}/Exercice">
        
-               <td>${ ac.titre}</td>
-          <td>${ ac.type}</td>
-             <td>${ ac.dateDebutActivite}</td>
-                <td>${ ac.dateFinActivite}</td>
-                 <td>${ ac.responsable.nom}  ${ ac.responsable.prenom}</td>
+               <td>${ ac.annee}</td>
+          <td>${ ac.dateDebut}</td>
+             <td>${ ac.dateFin}</td>
+                <td>${ ac.status}</td>
+                 <td>${ ac.activite.titre} </td>
                   
         
           

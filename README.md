@@ -2,7 +2,7 @@
 
  ## Team:
 
-*  [Omar Kazoum](https://github.com/nouha286)
+*  [Nouhaila aalami](https://github.com/nouha286)
 *  [Hamza laQraa](https://github.com/Hamzacos)
 
 ## User Story

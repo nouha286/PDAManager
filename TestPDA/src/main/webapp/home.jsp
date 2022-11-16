@@ -12,6 +12,7 @@
 	<a href="javascript:window.location.href='/check/Activite'">2-activitez</a><br>
 	<a href="javascript:window.location.href='/check/participant'">3-Participant</a><br>
 	<a href="javascript:window.location.href='/check/Exercice'">4-Exercice</a><br>
+	<a href="javascript:window.location.href='/check/search'">5-Search</a><br>
 
 </body>
 </html>

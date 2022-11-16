@@ -100,7 +100,9 @@
                 <td>${ pa.email}</td>
                    <td>${ pa.domaine}</td>
                       <td>${ pa.structure}</td>
-                       <td>${ pa.activites}</td>
+                       <td> <c:forEach var="i" begin="0" end="${pa.activites.size() }" step="1">
+    -${ pa.activites[i].titre}
+</c:forEach></td>
         
           
         

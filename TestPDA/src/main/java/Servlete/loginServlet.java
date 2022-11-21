@@ -47,8 +47,8 @@ public class loginServlet extends HttpServlet {
 	    	   
 	    	   if (auth.login(username, password) == 1) {
 		            long adminId = new AdminServiceImpl().findByEmail(username).getId();
-		            HttpSession session = request.getSession();
-		            session.setAttribute("adminId" , adminId );
+//		            HttpSession session = request.getSession();
+//		            session.setAttribute("adminId" , adminId );
 
 		            request.getRequestDispatcher("home.jsp").forward(request, response);
 		        } else {

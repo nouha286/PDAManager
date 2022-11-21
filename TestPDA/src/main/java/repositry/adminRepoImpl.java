@@ -22,16 +22,7 @@ public class adminRepoImpl implements AdminRepo {
 	}
 
 	public admin findByEmail(String email) {
-		
-//		EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("TestPDA");
-//	    EntityManager entityManager = entityFactory.createEntityManager();
-//	    Query query =  entityManager.createQuery("from admin where email =:email",admin.class);
-//	    query.setParameter("email", email);
-//	     
-//	   return (admin) query.getSingleResult();
-		
-		
-				
+						
 			EntityManagerFactory entityFactory = Persistence.createEntityManagerFactory("TestPDA");
 			EntityManager entityManager = entityFactory.createEntityManager();
 			return (admin) entityManager.createQuery("from admin where email =:email",admin.class)
